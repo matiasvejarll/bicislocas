@@ -7,7 +7,7 @@ function validateForm () {
   const bike = $("#bike").val();
   const social = $("#input-social").val();
 
-  
+  let tipoBicicleta = $('select[name=bike]').find("option:selected").val();
 
   const expresionRegular = /^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$/;
 
@@ -35,6 +35,9 @@ function validateForm () {
 
   if(!validEmail.test(email)){
     alert("el formato del correo es incorrecto")
+  }
+  if(tipoBicicleta == 0 ){
+    alert('debe seleccionar un tipo de bicicleta')
   }
 
 
