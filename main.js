@@ -8,8 +8,7 @@ function validateForm () {
 
   const expresionRegular = /^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$/;
 
-  let validemail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ 
-  
+  const validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
   if(name.length < 1 || lastname.length < 1 || email.length < 1 || password.length < 1){
     alert('Debe rellenar todos los campos')
@@ -30,12 +29,11 @@ function validateForm () {
   if(!expresionRegular.test(password)){
     alert("la clave debe tener almenos una letra y un numero, ademas de 6 caracteres de longitud minimo")
   }
-  if( validemail.test(input-email) ){
-		console.log("Email correcto");
-	}else{
-		alert('Email invalido');
-		return false;
-	}
+
+  if(!validEmail.test(email)){
+    alert("el formato del correo es incorrecto")
+  }
+
 } 
 
 
