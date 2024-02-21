@@ -5,12 +5,15 @@ function validateForm () {
   const email = $("#input-email").val();
   const password = $("#input-password").val();
   const bike = $("#bike").val();
+  const social = $("#input-social").val();
+
+  
 
   const expresionRegular = /^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$/;
 
   const validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
-  if(name.length < 1 || lastname.length < 1 || email.length < 1 || password.length < 1){
+  if(name.length < 1 || lastname.length < 1 || email.length < 1 || password.length < 1 || social < 1){
     alert('Debe rellenar todos los campos')
   }
   if(name.charAt(0) != name.charAt(0).toUpperCase() || lastname.charAt(0) != lastname.charAt(0).toUpperCase()){
@@ -33,6 +36,8 @@ function validateForm () {
   if(!validEmail.test(email)){
     alert("el formato del correo es incorrecto")
   }
+
+
 
 } 
 
